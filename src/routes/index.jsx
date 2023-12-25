@@ -5,6 +5,7 @@ import FavoriteMovie from "~/pages/favorite-movie";
 import Home from "~/pages/home";
 import Movie from "~/pages/movie";
 import NotFound from "~/pages/not-found";
+import Profile from "~/pages/profile";
 import Soon from "~/pages/soon";
 
 
@@ -32,6 +33,10 @@ const routes = createBrowserRouter([
             {
                 path:'soon',
                 element:<Soon />
+            },
+            {
+                path:':slug',
+                element:<Profile />
             },
             {
                 path:'*',

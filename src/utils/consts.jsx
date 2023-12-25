@@ -1,6 +1,10 @@
 import { IoIosAddCircle, IoMdHome } from "react-icons/io";
 import { RiMovie2Fill } from "react-icons/ri";
-import { MdAccessTimeFilled, MdOutlineFavorite } from "react-icons/md";
+import { MdAccessTimeFilled, MdAccountCircle, MdOutlineFavorite } from "react-icons/md";
+import store from "~/store";
+
+const state = store.getState()
+
 
 export const mainMenu=[
     {
@@ -27,6 +31,11 @@ export const mainMenu=[
         path:'/soon',
         title:'Yakında',
         icon:<MdAccessTimeFilled />
+    },
+    {
+        path:`/${state?.auth?.currentAccount?.username}`,
+        title:'Profil',
+        icon:<MdAccountCircle />
     }
     
 ]
